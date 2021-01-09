@@ -13,18 +13,18 @@ chmod +x requirements.sh
 ## Tutorial
 1. Run the main script as
 `./BellasEye`
-<img src="/images/image2.png" alt="main" />
+<img src="/images/image2.PNG" alt="main" />
 
 2. You may select a single option or you can automate multiple tasks by selecting multiple options, separated by a comma. All the duplicate processes will be skipped.
-<img src="/images/image3.png" alt="options" />
+<img src="/images/image3.PNG" alt="options" />
 
 ## Vulnerability Lookup
 You can search for any vulnerability by passsing a query in the form of a product name with/without version, CVE id, CPE id or even CWE id. The program will parse three major databases: 
   1. ExploitDb
   2. National Vulnerability Database
   3. VulDB (Requires API key)
-<img src="/images/vul1.png" alt="vul1" />
-<img src="/images/vul2.png" alt="vul2" />
+<img src="/images/vul1.PNG" alt="vul1" />
+<img src="/images/vul2.PNG" alt="vul2" />
 
 ## Disclaimer
 The creator of this code doesn't accept responsibility if it's used with malicious intent. This code is free to be used by anyone.  
