@@ -26,5 +26,9 @@ You can search for any vulnerability by passsing a query in the form of a produc
 <img src="/images/vul1.PNG" alt="vul1" />
 <img src="/images/vul2.PNG" alt="vul2" />
 
+## API Key Setup For VulDB
+1. Got to vuldb.com and create an account. 
+2. Go to profile and copy your api key
+
 ## Disclaimer
 The creator of this code doesn't accept responsibility if it's used with malicious intent. This code is free to be used by anyone.  
