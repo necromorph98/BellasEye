@@ -8,7 +8,7 @@ First we need to make requirements.sh executable before running. It will make su
 chmod +x requirements.sh
 ./requirements.sh
 ```
-<img src="/images/image1.png" alt="req" />
+<img src="/images/image1.PNG" alt="req" />
 
 ## Tutorial
 1. Run the main script as
