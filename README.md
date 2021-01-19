@@ -31,4 +31,4 @@ You can search for any vulnerability by passsing a query in the form of a produc
 2. Go to profile and copy your api key
 
 ## Disclaimer
-The creator of this code doesn't accept responsibility if it's used with malicious intent. This code is free to be used by anyone.  
+The creator of this code doesn't accept responsibility if it's used with malicious intent. This code is free to be used by anyone. This project should not be used to harm any individual or organisation. 
