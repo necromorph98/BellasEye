@@ -1,5 +1,5 @@
 # BellasEye
-A fun and easy program written on BASH to automate and save time during vulnerability analysis and penetration testing. It automates various tools such as NMAP, Gobuster, theHarvester etc. It uses a custom designed Vulnerability Lookup which parses major databases like ExploitDB, National Vulnerability Database and VulDB (requires an API key). It saves all the outputs to separate files for easy use.
+A lightweight program written in BASH to automate and save time during vulnerability analysis and penetration testing. It automates various tools such as NMAP, Gobuster, theHarvester etc. It uses a custom designed Vulnerability Lookup which parses major databases like ExploitDB, National Vulnerability Database and VulDB (requires an API key). It saves all the outputs to separate files for easy use.
 
 ## Setting up
 First we need to make requirements.sh executable before running. It will make sure you have all the tools/files available. 
