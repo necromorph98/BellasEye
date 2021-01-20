@@ -30,8 +30,14 @@ You can search for any vulnerability by passsing a query in the form of a produc
 1. Got to vuldb.com and create an account. 
 2. Go to profile and copy your api key
 
-## Disclaimer
-The creator of this code doesn't accept responsibility if it's used with malicious intent. This code is free to be used by anyone. This project should not be used to harm any individual or organisation. 
 
 # Contact
 Email: bellaseye.cyber@gmail.com
+
+#Support this project!
+https://www.patreon.com/necromorph
+
+# Disclaimer
+The creator of this code doesn't accept responsibility if it's used with malicious intent. This code is free to be used by anyone. This project should not be used to harm any individual or organisation. 
+
+
