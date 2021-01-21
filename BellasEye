@@ -1146,7 +1146,7 @@ echo " | |_) | |____| |____| |____ / ____ \   ____) | | |____   | |  | |____  "
 echo " |____/|______|______|______/_/    \_\ |_____/  |______|  |_|  |______| "
 echo
 echo "Creator: Abhinav Gupta aka NECROMORPH"
-echo "Consider Supporting: https://www.patreon.com/necromorph
+echo "Consider Supporting: https://www.patreon.com/necromorph"
 echo -e "${BPURPLE}"                                                   
 
 echo "Types of Scans Available (Now Runs Multiple Options):-"
