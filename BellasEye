@@ -1149,7 +1149,7 @@ echo "Creator: Abhinav Gupta aka NECROMORPH"
 echo "Consider Supporting: https://www.patreon.com/necromorph
 echo -e "${BPURPLE}"                                                   
 
-echo "Types of Scans Available (Now Runs Multiple Options):-"
+echo ""
 echo ""
 echo "1.  NMAP Basic"
 echo "2.  NMAP Half Open Scan"
