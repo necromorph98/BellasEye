@@ -32,7 +32,7 @@ You can search for any vulnerability by passsing a query in the form of a produc
 
 
 # Contact
-Email: bellaseye.cyber@gmail.com
+Email: abhinavgupta@bellaseye.tech
 
 # Support this project!
 https://www.patreon.com/necromorph
